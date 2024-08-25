@@ -1,0 +1,176 @@
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url('home3.jpg') no-repeat center;
+    background-size: cover; 
+    position: relative;
+    border-radius: 20px;
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 2s;
+}
+
+.header-contents h2 {
+    font-weight: 500;
+    font-size: 4.5vw;
+    color: white;
+    background: linear-gradient(120deg, hsl(0, 0%, 20%) 0%, hsl(0, 0%, 100%) 50%, hsl(0, 0%, 20%) 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s infinite linear;
+}
+
+.header-contents button {
+    border: none;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white; 
+    font-size: max(1vw, 13px);
+    color: #747474;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.header-contents button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start the shine off-screen */
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation:  shinee 1.3s infinite linear;
+}
+.header-contents button:hover{
+    transform: scale(1.02);
+}
+
+.header-contents button:hover::before {
+    left: 100%; 
+}
+@keyframes shinee {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    50% {
+        left: 100%; /* Move shine across the text */
+    }
+    100% {
+        left: -100%; /* Loop back to start */
+    }
+}
+@keyframes shine {
+    0% {
+        background-position: -100% 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+.header-contents p {
+    color: white;
+    font-size: 1vw;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid orange; /* Typewriter cursor effect */
+    animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+/* Media queries for header adjustments */
+
+/* Up to 1050px: Minor adjustments */
+@media (max-width: 1050px) {
+    .header {
+        padding: 15px 0;
+    }
+
+    .header-logo {
+        width: 140px;
+    }
+
+    .header-menu {
+        font-size: 17px;
+        gap: 15px;
+    }
+
+    .header-actions {
+        gap: 25px;
+    }
+}
+
+/* Up to 900px: More noticeable changes */
+@media (max-width: 900px) {
+    .header {
+        padding: 10px 0;
+    }
+
+    .header-logo {
+        width: 120px;
+    }
+
+    .header-menu {
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    .header-actions {
+        gap: 20px;
+    }
+}
+
+/* Up to 750px: Mobile adjustments */
+@media (max-width: 750px) {
+    .header {
+        padding: 8px 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-logo {
+        width: 100px;
+    }
+
+    .header-menu {
+        display: none; /* Hide menu for mobile */
+    }
+
+    .header-actions {
+        gap: 15px;
+    }
+}

@@ -1,0 +1,107 @@
+.footer{
+    color:#d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 8vw;
+    padding-top: 80px;
+    margin-top: 100px;
+}
+.footer-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+}
+.footer-content-left , .footer-content-center , .footer-content-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+.footer-content-left li, .footer-content-center li, .footer-content-right li {
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.footer-content-right h2,.footer-content-center h2{
+    color: white;
+}
+.footer-social-icons img {
+    width:40px;
+    margin-right: 15px;
+}
+.footer hr{
+    width: 100%;
+    height: 2px;
+    margin: 20px 0;
+    background-color: grey;
+    border: none;
+}
+@keyframes revolve {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Media queries for footer adjustments */
+
+/* Up to 1050px: Adjust layout and spacing */
+@media (max-width: 1050px) {
+    .footer {
+        padding: 20px 5vw;
+        padding-top: 60px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr; /* Change to two columns */
+        gap: 40px;
+    }
+}
+
+/* Up to 900px: Further adjustments for smaller screens */
+@media (max-width: 900px) {
+    .footer {
+        padding: 20px 4vw;
+        padding-top: 40px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+        gap: 20px;
+    }
+
+    .footer-social-icons img {
+        width: 30px; /* Smaller social icons */
+        margin-right: 10px;
+    }
+}
+
+/* Up to 750px: Mobile adjustments */
+@media (max-width: 750px) {
+    .footer {
+        padding: 15px 2vw;
+        padding-top: 20px;
+        margin-top: 50px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr; /* Ensure single column for all screen sizes */
+        gap: 10px;
+    }
+
+    .footer-social-icons img {
+        width: 25px; /* Even smaller social icons */
+    }
+
+    .footer-content-left li,
+    .footer-content-center li,
+    .footer-content-right li {
+        margin-bottom: 5px;
+    }
+}
+
