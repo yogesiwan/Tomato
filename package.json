@@ -1,6 +1,7 @@
 {
   "name": "fooddelivery",
   "version": "1.0.0",
+  "homepage": "https://yogesiwan.github.io/Tomato",
   "main": "index.js",
   "type": "module",
   "scripts": {
