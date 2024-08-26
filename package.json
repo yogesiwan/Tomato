@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yogesiwan.github.io/tomato-react",
+  "homepage": "https://yogesiwan.github.io/tomato-app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
