@@ -124,7 +124,7 @@ export const menu_list = [
         menu_image: menu_8
     }]
 
-export const food_list = [
+     const food_listt = [
     {
         _id: "1",
         name: "Greek salad",
@@ -356,3 +356,10 @@ export const food_list = [
         category: "Noodles"
     }
 ]
+
+food_listt.forEach(item => {
+    item.price *= 10;
+});
+
+export const food_list = food_listt;
+
