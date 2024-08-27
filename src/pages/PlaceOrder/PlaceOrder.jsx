@@ -48,7 +48,7 @@ const PlaceOrder = () => {
       <div className="place-order-right">
       <div className="cart-total">
           <h2>Cart Total</h2>
-          <div>
+          <div className="yogi1">
           <div className="cart-total-details">
               <p>SubTotal</p>
               <p>₹{getTotalCartAmount()}</p>
@@ -64,7 +64,7 @@ const PlaceOrder = () => {
               <b>{getTotalCartAmount()===0?0:'₹'+(getTotalCartAmount()+50)}</b>
             </div>
           </div>
-          <button>Proceed To Payment</button>
+          <button onClick={() => navigate("/")}>Proceed To Payment</button>
         </div>
       </div>
     </form>

@@ -56,6 +56,10 @@
     border-radius: 4px;
     cursor: pointer;
     width: max(15vw,200px);
+    transition: 0.2s ease-in-out;
+}
+.cart-total button:hover{
+    background-color: #ef5a40;
 }
 .cart-promocode{
     flex: 1;

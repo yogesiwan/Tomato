@@ -23,7 +23,7 @@
     padding: 10px;
     border: 1px solid #c5c5c5;
     border-radius: 4px;
-    outline-color: tomato;
+    outline-color: #ff6347;
 }
 
 .place-order-left .multi-fields{
@@ -38,7 +38,11 @@
 
 .place-order .cart-total button{
     margin-top: 30px;
+    transition: 0.2s ease-in-out;
+}
 
+.place-order .cart-total button:hover{
+    background-color: #ef5a40;
 }
 
 
